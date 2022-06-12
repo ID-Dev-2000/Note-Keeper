@@ -14,6 +14,21 @@ textarea {
     flex-direction: column;
 }
 
+.confirmationParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.confirmationParent *{
+    margin: 5px;
+}
+
+.yesNoClick:hover {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 320px) {
     textarea {
         width: 250px;

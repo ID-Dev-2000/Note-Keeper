@@ -8,9 +8,25 @@ noteTextArea.addEventListener('keyup', function() {
     noteTextArea.value = textField
 })
 
-resetButton.addEventListener('click', function() {
+function clearFieldAndData() {
     noteTextArea.value = ''
     localStorage.clear()
+}
+
+// handle clear function
+let yesClick = document.getElementById('yesClick')
+let noClick = document.getElementById('noClick')
+let confirmClearParent = document.getElementById('confirmationParentID')
+
+resetButton.addEventListener('click', function() {
+    confirmClearParent.style.display = ''
+    yesClick.addEventListener('click', function() {
+        clearFieldAndData()
+        confirmClearParent.style.display = 'none'
+    })
+    noClick.addEventListener('click', function() {
+        confirmClearParent.style.display = 'none'
+    })
 })
 
 function setTextAreaOnLoad() {
