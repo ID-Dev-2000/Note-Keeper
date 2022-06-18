@@ -34,4 +34,20 @@ function setTextAreaOnLoad() {
     noteTextArea.value = textFieldOnLoadValue
 }
 
+// Copy text to clipboard
+let copyButton = document.getElementById('copyButton')
+let copyConfirm = document.getElementById('copyConfirm')
+
+copyButton.addEventListener('click', function() {
+    let copyText = localStorage.getItem('textField')
+    navigator.clipboard.writeText(copyText).then(function() {
+        copyConfirm.hidden = false
+        setTimeout(function() {
+            copyConfirm.hidden = true
+        }, 1500)
+    }, function() {
+        console.log('Error: textArea was unable to copy.')
+    })
+})
+
 setTextAreaOnLoad()

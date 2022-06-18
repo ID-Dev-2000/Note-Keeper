@@ -14,13 +14,13 @@
     <a href="https://github.com/ID-Dev-2000/Note-Keeper" style="color: white;"><-</a></div>
     
     <main class="mainContent">
-        <h1>Note Keeper</h1>
+        <h1 style="margin-bottom: 0px;">Note Keeper</h1>
         <p>
             Keep notes here. Dynamically updated. Data stored locally.
             <br> 
             Notes will be deleted after clearing your browser cookies!
         </p>
-        <hr>
+        <hr style="width: 100px;">
         <div class="noteText">
             <textarea id="noteTextArea" placeholder="Notes" spellcheck="false"></textarea>
         </div>
@@ -29,6 +29,10 @@
             <p>Are you sure?</p>
             <p><span id="yesClick" class="yesNoClick">Yes</span><span> / </span><span id="noClick" class="yesNoClick">No</span></p>
         </div>
+        <hr style="width: 100px;">
+        <span style="margin-bottom: 5px;">!Copy notes before clearing your browser history!</span>
+        <button id="copyButton">Copy to clipboard</button>
+        <p style="color: red;" id="copyConfirm" hidden>Copied!</p>
     </main>
     <script src="script.js"></script>
 </body>
